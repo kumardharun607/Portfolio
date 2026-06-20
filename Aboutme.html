@@ -1,89 +1,304 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About me</title>
-     <script src="https://cdn.tailwindcss.com"></script>
-   <link rel="stylesheet"
-href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>About Me</title>
 
-    <link rel="stylesheet" href="./index.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
-<body>
-    <div class="bg-amber-200 ">
 
-    
-    <nav>
-        <a href="./index.html"><button class="text-2xl mt-5 h-[50px] w-[150px] rounded-[10px] ml-20 bg-amber-900 text-amber-200 shadow-2xl [box-shadow:_4px_7px_8px_rgba(122,53,15,0.9)] transition-all duration-300 ease-in-out hover:scale-110 hover:[box-shadow:_6px_6px_6px_rgba(238,116,26,0.7)]"><i class="bi bi-box-arrow-in-left text-3xl"></i>Go Back</button></a>
+<body class="bg-amber-200 min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="px-4 sm:px-6 lg:px-8 pt-6">
+
+        <a href="./index.html">
+
+            <button
+                class="flex items-center gap-2
+                       bg-amber-900
+                       text-amber-200
+                       px-5 py-3
+                       rounded-xl
+                       font-semibold
+                       shadow-lg
+                       transition-all duration-300
+                       hover:scale-105">
+
+                <i class="bi bi-box-arrow-in-left text-xl"></i>
+                Go Back
+
+            </button>
+
+        </a>
+
     </nav>
-    <div class="ml-20 mr-20">
-        <h1 class="mt-5 text-4xl font-bold text-amber-900 mb-5 [text-shadow:_3px_3px_3px_rgba(122,53,15,0.7)] ">About Me</h1>
-        <div class="h-[1px]  bg-amber-900 mb-[20px]"></div>
-        <div class="flex">
-            <div class="h-[300px]  w-1/2 flex justify-items-center items-center">
-                <p class=" font-bold text-[20px] text-orange-500">
-                    I hold a degree in Computer Science and have a strong passion for web design and development. I specialize in creating responsive websites that provide seamless experiences across both web and mobile platforms. With a focus on utilizing the latest technologies, I am adept at developing optimized, high-performing websites tailored to deliver exceptional user experiences on any device.
 
-                </p>
-            </div>
-            <div class="h-[300px] mr-20 w-1/2 flex justify-center items-center overflow-hidden object-cover ">
-                <img src="./typing.jpg" alt="typing photo" class="h-[250px]  rounded-2xl cursor-pointer  transition-all duration-300 ease-in-out [box-shadow:_4px_9px_4px_rgba(122,53,15,0.7)] hover:scale-110 hover:[box-shadow:_6px_6px_7px_rgba(238,116,26,0.9)]">
+    <!-- Main Container -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
+        <!-- About Me -->
+        <section>
+
+            <h1
+                class="text-3xl sm:text-4xl md:text-5xl
+                       font-bold
+                       text-amber-900
+                       mb-6">
+
+                About Me
+
+            </h1>
+
+            <div class="w-full h-[2px] bg-amber-900 mb-10"></div>
+
+            <div class="flex flex-col lg:flex-row items-center gap-10">
+
+                <!-- Text -->
+                <div class="w-full lg:w-1/2">
+
+                    <p
+                        class="text-lg md:text-xl
+                               font-semibold
+                               text-orange-500
+                               leading-relaxed">
+
+                        I hold a degree in Computer Science and have a strong
+                        passion for web design and development. I specialize in
+                        creating responsive websites that provide seamless
+                        experiences across both web and mobile platforms.
+
+                        With a focus on utilizing the latest technologies,
+                        I am adept at developing optimized, high-performing
+                        websites tailored to deliver exceptional user
+                        experiences on any device.
+
+                    </p>
+
+                </div>
+
+                <!-- Image -->
+                <div class="w-full lg:w-1/2 flex justify-center">
+
+                    <img
+                        src="./typing.jpg"
+                        alt="Typing Photo"
+
+                        class="w-full
+                               max-w-md
+                               rounded-2xl
+                               shadow-2xl
+                               transition-all duration-300
+                               hover:scale-105">
+
+                </div>
 
             </div>
-        </div>
-        <div class="h-[1px]  bg-amber-900 mb-[20px]"></div>
-        <h1 class="text-4xl font-bold [text-shadow:_3px_3px_3px_rgba(122,53,15,0.7)] text-amber-900 mb-5">Work Experience</h1>
-        
-        <h2 class="text-3xl font-bold  text-orange-500 mt-1">
-            Junior PHP Developer
 
-        </h2>
-        <h3 class="text-2xl mb-4 font-bold  text-orange-500 mt-1">
-            Mic & Mac Solutions Private Limited -June 2026 to present
-        </h3>
-        <ul >
-            <li class="text-orange-500 font-bold "><i class="bi bi-hand-thumbs-up mr-3 text-2xl  text-orange-900 "></i><span class="mb-7">Started as a Web Developer Intern (June to July 2026) and converted to a junior PHP Developer.</span></li>
-            <li class="text-orange-500 font-bold"><i class="bi bi-hand-thumbs-up mr-3 text-2xl  text-orange-900"></i>Worked on API Integration for seamless data exchange between services.</li>
-            <li class="text-orange-500 font-bold"><i class="bi bi-hand-thumbs-up mr-3 text-2xl  text-orange-900"></i>Developed responsive front end websites using Bootstrap ensuring compatibility across devices.</li>
-            <li class="text-orange-500 font-bold"><i class="bi bi-hand-thumbs-up mr-3 text-2xl  text-orange-900"></i>Managed backend development with PHP and MYSQL handling database design,queries and table management.</li>
-        </ul>
-        <div class="h-[1px]  bg-amber-900 mb-[20px] mt-10 mb-15"></div>
-        <h1 class="text-4xl font-bold text-amber-900 mb-5 [text-shadow:_3px_3px_3px_rgba(122,53,15,0.7)]">Education</h1>
-        <div class="h-[700px]   flex justify-center items-center">
-        <div class="  grid grid-cols-[350px_350px_350px] grid-rows-[200px_200px_200px] gap-3 ">
-        <div class="bg-orange-500 rounded-tl-2xl text-amber-200 text-3xl font-bold flex justify-center items-center shadow-2xl shadow-amber-500" id="box1">2021-2025</div>
-        <div class="bg-orange-500  text-amber-200 relative flex flex-col justify-center items-center font-bold shadow-2xl shadow-amber-500" id="box2">
-            <div class="ml-8">
-            <h1 >Sasurie College Of Engineering</h1>
-            <p>Tiruppur</p>
-            <h1>Bachelor of Computer Science and Engineering</h1>
+        </section>
+
+        <!-- Divider -->
+        <div class="w-full h-[2px] bg-amber-900 my-12"></div>
+
+        <!-- Work Experience -->
+        <section>
+
+            <h1
+                class="text-3xl sm:text-4xl
+                       font-bold
+                       text-amber-900
+                       mb-6">
+
+                Work Experience
+
+            </h1>
+
+            <h2
+                class="text-2xl md:text-3xl
+                       font-bold
+                       text-orange-500">
+
+                Junior PHP Developer
+
+            </h2>
+
+            <h3
+                class="text-xl md:text-2xl
+                       font-bold
+                       text-orange-500
+                       mt-2 mb-6">
+
+                Mic & Mac Solutions Private Limited
+                - June 2026 to Present
+
+            </h3>
+
+            <ul class="space-y-4">
+
+                <li class="flex items-start gap-3 text-orange-500 font-semibold">
+
+                    <i class="bi bi-hand-thumbs-up-fill text-orange-900 text-xl"></i>
+
+                    Started as a Web Developer Intern (June to July 2026)
+                    and converted to a Junior PHP Developer.
+
+                </li>
+
+                <li class="flex items-start gap-3 text-orange-500 font-semibold">
+
+                    <i class="bi bi-hand-thumbs-up-fill text-orange-900 text-xl"></i>
+
+                    Worked on API Integration for seamless data exchange
+                    between services.
+
+                </li>
+
+                <li class="flex items-start gap-3 text-orange-500 font-semibold">
+
+                    <i class="bi bi-hand-thumbs-up-fill text-orange-900 text-xl"></i>
+
+                    Developed responsive front-end websites using Bootstrap,
+                    ensuring compatibility across devices.
+
+                </li>
+
+                <li class="flex items-start gap-3 text-orange-500 font-semibold">
+
+                    <i class="bi bi-hand-thumbs-up-fill text-orange-900 text-xl"></i>
+
+                    Managed backend development with PHP and MySQL,
+                    handling database design, queries, and table management.
+
+                </li>
+
+            </ul>
+
+        </section>
+
+        <!-- Divider -->
+        <div class="w-full h-[2px] bg-amber-900 my-12"></div>
+
+        <!-- Education -->
+        <section>
+
+            <h1
+                class="text-3xl sm:text-4xl
+                       font-bold
+                       text-amber-900
+                       mb-8">
+
+                Education
+
+            </h1>
+
+            <div
+                class="grid
+                       grid-cols-1
+                       md:grid-cols-2
+                       lg:grid-cols-3
+                       gap-8">
+
+                <!-- College -->
+                <div
+                    class="bg-orange-500
+                           text-amber-100
+                           rounded-2xl
+                           p-6
+                           shadow-xl
+                           hover:scale-105
+                           transition-all duration-300">
+
+                    <h2 class="text-2xl font-bold mb-4">
+                        2021 - 2025
+                    </h2>
+
+                    <h3 class="text-xl font-bold">
+                        Sasurie College Of Engineering
+                    </h3>
+
+                    <p>Tiruppur</p>
+
+                    <p class="mt-3">
+                        Bachelor of Computer Science and Engineering
+                    </p>
+
+                    <p class="mt-4 text-xl font-bold">
+                        Percentage: 77%
+                    </p>
+
+                </div>
+
+                <!-- HSC -->
+                <div
+                    class="bg-orange-500
+                           text-amber-100
+                           rounded-2xl
+                           p-6
+                           shadow-xl
+                           hover:scale-105
+                           transition-all duration-300">
+
+                    <h2 class="text-2xl font-bold mb-4">
+                        2020 - 2021
+                    </h2>
+
+                    <h3 class="text-xl font-bold">
+                        Cambridge Matriculation Hr Sec School
+                    </h3>
+
+                    <p>Panthampalayam</p>
+
+                    <p class="mt-3">
+                        Higher Secondary Certificate (HSC)
+                    </p>
+
+                    <p class="mt-4 text-xl font-bold">
+                        Percentage: 84%
+                    </p>
+
+                </div>
+
+                <!-- SSLC -->
+                <div
+                    class="bg-orange-500
+                           text-amber-100
+                           rounded-2xl
+                           p-6
+                           shadow-xl
+                           hover:scale-105
+                           transition-all duration-300">
+
+                    <h2 class="text-2xl font-bold mb-4">
+                        2018 - 2019
+                    </h2>
+
+                    <h3 class="text-xl font-bold">
+                        Govt Hr Sec School
+                    </h3>
+
+                    <p>Cheyur</p>
+
+                    <p class="mt-3">
+                        Secondary School Leaving Certificate (SSLC)
+                    </p>
+
+                    <p class="mt-4 text-xl font-bold">
+                        Percentage: 72%
+                    </p>
+
+                </div>
+
             </div>
-        </div>
-        <div class="bg-orange-500 rounded-tr-2xl  text-amber-200 text-3xl font-bold flex justify-center items-center shadow-2xl shadow-amber-500" id="box3">
-            <h1>Percentage:77%</h1>
-        </div>
-        <div class="bg-orange-500  text-amber-200 text-3xl font-bold flex justify-center items-center shadow-2xl shadow-amber-500" id="box4">2020-2021</div>
-        <div class="bg-orange-500  text-amber-200 flex flex-col justify-center items-center shadow-2xl shadow-amber-500 font-bold" id="box5">
-             <div class="ml-8">
-            <h1 >Cambridge Matriculation Hr Sec School</h1>
-            <p>Panthampalayam</p>
-            <h1>HSC</h1>
-            </div>
-        </div>
-        <div class="bg-orange-500  text-amber-200 text-3xl font-bold flex justify-center items-center shadow-2xl shadow-amber-500" id="box6">Percentage:84%</div>
-        <div class="bg-orange-500 rounded-bl-2xl  text-amber-200 text-3xl flex justify-center items-center font-bold shadow-2xl shadow-amber-500" id="box7 ">2018-2019</div>
-        <div class="bg-orange-500  text-amber-200  font-bold flex items-center shadow-2xl shadow-amber-500 " id="box8">
-             <div class="ml-10">
-            <h1 >Govt Hr Sec School</h1>
-            <p>Cheyur</p>
-            <h1>SSLC</h1>
-            </div>
-        </div>
-        <div class="bg-orange-500 rounded-br-2xl  text-amber-200 text-3xl font-bold flex justify-center items-center shadow-2xl shadow-amber-500" id="box9">Percentage:72%</div>
-        </div>
-        </div>
-    </div>
-    </div>
+
+        </section>
+
+    </main>
+
 </body>
 </html>
+
