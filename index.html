@@ -1,375 +1,60 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dharun Kumar | Portfolio</title>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
+   <script src="https://cdn.tailwindcss.com"></script>
+   <link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <link rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
-    <style>
-        html{
-            scroll-behavior:smooth;
-        }
-
-        body{
-            overflow-x:hidden;
-        }
-
-        /* Floating Image */
-        @keyframes float{
-            0%,100%{
-                transform:translateY(0px);
-            }
-            50%{
-                transform:translateY(-20px);
-            }
-        }
-
-        /* Rotating Ring */
-        @keyframes rotate{
-            from{
-                transform:rotate(0deg);
-            }
-            to{
-                transform:rotate(360deg);
-            }
-        }
-
-        /* Background Glow */
-        @keyframes pulseGlow{
-            0%,100%{
-                transform:scale(1);
-                opacity:.20;
-            }
-            50%{
-                transform:scale(1.2);
-                opacity:.45;
-            }
-        }
-
-        /* Logo Gradient */
-        @keyframes gradientMove{
-            0%{
-                background-position:0% 50%;
-            }
-            50%{
-                background-position:100% 50%;
-            }
-            100%{
-                background-position:0% 50%;
-            }
-        }
-
-        .floating{
-            animation:float 5s ease-in-out infinite;
-        }
-
-        .rotate-ring{
-            animation:rotate 15s linear infinite;
-        }
-
-        .glow{
-            animation:pulseGlow 8s ease-in-out infinite;
-        }
-
-        .logo-gradient{
-            background:linear-gradient(
-                90deg,
-                #a855f7,
-                #ffffff,
-                #d8b4fe,
-                #a855f7
-            );
-
-            background-size:300% 300%;
-            animation:gradientMove 6s ease infinite;
-
-            -webkit-background-clip:text;
-            -webkit-text-fill-color:transparent;
-        }
-
-        .glass{
-            background:rgba(255,255,255,.08);
-            backdrop-filter:blur(20px);
-            border:1px solid rgba(255,255,255,.12);
-        }
-
-        .glass:hover{
-            box-shadow:
-            0 0 30px rgba(168,85,247,.25);
-        }
-
-        /* Mobile Menu */
-        #menu-toggle{
-            display:none;
-        }
-
-        @media(max-width:768px){
-
-            .mobile-menu{
-                display:none;
-            }
-
-            #menu-toggle:checked ~ .mobile-menu{
-                display:flex;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="./index.css">
+    <title>My Portfolio</title>
 </head>
+<body>
+    <div class="bg-amber-200 ">
+    <nav class="flex justify-between items-center bg-orange-900 rounded-b-2xl  flex-wrap   lg:bg-orange-900  md:bg-orange-900   max-w-full mx-auto px-4 py-4 relative ">
+        <h1 class="m-5  text-2xl text-amber-100 font-bold ">M.DharunKumar</h1>
+        <ol class="m-5 flex flex-col md:flex-row gap-4">
+           <a href="./Aboutme.html"><li class="text-amber-100 font-bold transition-all duration-300 ease-in hover:bg-orange-400 h-8 p-0.5 pl-2 w-[100px] rounded-[10px] cursor-pointer hover:scale-110 [box-shadow:_4px_4px_4px_rgba(253,230,137,0.7)]">About me</li></a> 
+           <a href="./Skills.html"> <li class="text-amber-100 font-bold md:ml-5 transition-all duration-300 ease-in hover:bg-orange-400 h-8 p-0.5 pl-2 w-[100px] rounded-[10px] cursor-pointer hover:scale-110 [box-shadow:_4px_4px_4px_rgba(253,230,137,0.7)]">Skills</li></a>
+           <a href="./Projects.html"> <li class="text-amber-100 font-bold transition-all duration-300 ease-in hover:bg-orange-400 h-8 p-0.5 pl-2 w-[100px] rounded-[10px] cursor-pointer hover:scale-110 [box-shadow:_4px_4px_4px_rgba(253,230,137,0.7)]">Projects</li></a>
+           <a href="./Contactme.html"> <li class="text-amber-100 font-bold transition-all duration-300 ease-in hover:bg-orange-400 h-8 p-0.5 pl-2 w-[100px] rounded-[10px] cursor-pointer hover:scale-110 [box-shadow:_4px_4px_4px_rgba(253,230,137,0.7)]">Contact Me</li></a>
+           <a href="https://www.linkedin.com/in/techdharunkumar/" class="[target:_blank]">  <li class="transition-all duration-300 ease-in  hover:scale-110"><i class="bi bi-linkedin text-amber-100 font-bold transition-all duration-300 ease-in relative top-1.5 hover:scale-110 hover:bg-orange-400 h-8 p-0.5  pl-2 pr-2 w-[100px] rounded-[10px] cursor-pointer hover:scale-110 [box-shadow:_4px_4px_4px_rgba(253,230,137,0.7)]"></i></li></a>
+           <a href="mailto:kumardharun607@gmail.com"> <li class="  transition-all duration-300 ease-in  hover:scale-110"><i class="bi bi-envelope-fill text-amber-100 font-bold   hover:bg-orange-400 h-8 p-0.5 pl-2 pr-2 w-[100px] rounded-[10px] cursor-pointer relative top-1.5 hover:scale-110 [box-shadow:_4px_4px_4px_rgba(253,230,137,0.7)]"></i></li></a>
 
-<body class="bg-slate-950 text-slate-200">
-
-    <!-- Animated Background -->
-
-    <div class="fixed inset-0 -z-10 overflow-hidden">
-
-        <div class="absolute top-0 left-0 w-80 h-80 bg-purple-600 rounded-full blur-[140px] opacity-20 glow"></div>
-
-        <div class="absolute bottom-0 right-0 w-96 h-96 bg-fuchsia-600 rounded-full blur-[150px] opacity-20 glow"></div>
-
-        <div class="absolute top-1/2 left-1/2 w-[500px] h-[500px] bg-violet-700 rounded-full blur-[180px] opacity-10 glow"></div>
-
-    </div>
-
-    <!-- Navbar -->
-
-    <nav class="sticky top-0 z-50 glass">
-
-        <div class="max-w-7xl mx-auto px-4 py-4">
-
-            <div class="flex justify-between items-center">
-
-                <h1 class="text-2xl md:text-4xl font-bold logo-gradient">
-                    Dharun Kumar
-                </h1>
-
-                <label for="menu-toggle"
-                class="md:hidden text-3xl cursor-pointer">
-                    <i class="bi bi-list"></i>
-                </label>
-
-                <input type="checkbox" id="menu-toggle">
-
-                <ul class="hidden md:flex gap-6 items-center">
-
-                    <li><a href="./Aboutme.html" class="hover:text-purple-400 transition">About</a></li>
-
-                    <li><a href="./Skills.html" class="hover:text-purple-400 transition">Skills</a></li>
-
-                    <li><a href="./Projects.html" class="hover:text-purple-400 transition">Projects</a></li>
-
-                    <li><a href="./Contactme.html" class="hover:text-purple-400 transition">Contact</a></li>
-
-                    <li>
-                        <a href="https://www.linkedin.com/in/techdharunkumar/" target="_blank">
-                            <i class="bi bi-linkedin text-xl hover:text-purple-400"></i>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="mailto:kumardharun607@gmail.com">
-                            <i class="bi bi-envelope-fill text-xl hover:text-purple-400"></i>
-                        </a>
-                    </li>
-
-                </ul>
-
-            </div>
-
-            <!-- Mobile Menu -->
-
-            <ul class="mobile-menu md:hidden flex-col gap-4 mt-5 text-center">
-
-                <li><a href="./Aboutme.html">About</a></li>
-                <li><a href="./Skills.html">Skills</a></li>
-                <li><a href="./Projects.html">Projects</a></li>
-                <li><a href="./Contactme.html">Contact</a></li>
-
-            </ul>
-
-        </div>
-
+        </ol>
     </nav>
+    <main class="max-w-7xl mx-auto" >
+        <div class="flex" >
+        <div class="h-[450px] w-1/2  bg-amber-200  flex flex-col items-center justify-center ">
+            <div class=" pl-3 text-amber-800 ">
+            <h1 class="text-2xl font-bold [text-shadow:_4px_4px_4px_rgba(122,53,17,0.7)] transition-all duration-300 ease-in-out">Hi I'm</h1>
 
-    <!-- Hero Section -->
-
-    <main class="max-w-7xl mx-auto px-5">
-
-        <section class="min-h-[90vh] flex flex-col-reverse lg:flex-row items-center justify-center gap-12 py-10">
-
-            <!-- Content -->
-
-            <div class="w-full lg:w-1/2">
-
-                <div class="glass rounded-3xl p-6 md:p-8 transition-all duration-500">
-
-                    <h2 class="text-purple-400 text-3xl md:text-4xl font-bold mb-3">
-                        Hi, I'm
-                    </h2>
-
-                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-black mb-4">
-                        Dharunkumar M
-                    </h1>
-
-                    <h3 class="text-xl md:text-2xl text-purple-300 mb-6">
-                        Full Stack Web Developer
-                    </h3>
-
-                    <p class="text-slate-300 leading-relaxed text-base md:text-lg">
-
-                        Aspiring Full Stack Web Developer passionate about
-                        building responsive and scalable web applications.
-
-                        Skilled in PHP, MySQL, JavaScript, Bootstrap,
-                        Tailwind CSS and modern web technologies.
-
-                        Dedicated to continuous learning and delivering
-                        high-quality digital experiences.
-
-                    </p>
-
-                    <div class="flex flex-wrap gap-4 mt-8">
-
-                        <a href="./Projects.html">
-
-                            <button
-                            class="bg-purple-600 hover:bg-purple-500 px-6 py-3 rounded-xl font-semibold transition hover:scale-105">
-
-                                View Projects
-
-                            </button>
-
-                        </a>
-
-                        <a href="./Contactme.html">
-
-                            <button
-                            class="glass px-6 py-3 rounded-xl font-semibold transition hover:scale-105">
-
-                                Contact Me
-
-                            </button>
-
-                        </a>
-
-                    </div>
-
-                </div>
-
+            <h1 class="text-2xl  mb-4 font-bold [text-shadow:_4px_4px_4px_rgba(122,53,17,0.7)]">Dharunkumar M</h1>
+            <p>Aspiring Web Developer seeking to build a career in an organization where I can effectively apply my skills and grow as a professional. Dedicated to achieving excellence and recognition in the field of web development while continuously learning and improving.</p>
             </div>
-
-            <!-- Profile -->
-
-            <div class="w-full lg:w-1/2 flex justify-center">
-
-                <div class="relative floating">
-
-                    <div class="absolute -inset-5 border-4 border-purple-500/30 rounded-full rotate-ring"></div>
-
-                    <div class="absolute inset-0 bg-purple-600 rounded-full blur-3xl opacity-40"></div>
-
-                    <img
-                    src="./asthetic-photo1.1.png"
-                    alt="Dharun Kumar"
-
-                    class="relative
-                    w-[240px]
-                    h-[240px]
-                    sm:w-[320px]
-                    sm:h-[320px]
-                    md:w-[400px]
-                    md:h-[400px]
-                    lg:w-[450px]
-                    lg:h-[450px]
-                    rounded-full
-                    object-cover
-                    border-4 border-purple-500
-                    shadow-[0_0_60px_rgba(168,85,247,.5)]
-                    transition-all duration-500
-                    hover:scale-105">
-
-                </div>
-
-            </div>
-
-        </section>
+        </div>
+        <div class="h-[450px] w-1/2 bg-amber-200 flex items-center justify-center ">
+            <img class="h-[200px]  w-[100px] sm:h-[400px] sm:w-[200px] lg:h-[300px] lg:w-[300px]  object-cover rounded-[15px] hover:scale-110 cursor-pointer transition-all duration-500 [box-shadow:_8px_9px_9px_rgba(238,116,26)]" src="./asthetic-photo1.1.png"  alt="My_Profile">
+        </div>
+        </div>
 
     </main>
+    <footer>
+        <div class="h-[170px] md:h-[90px] bg-orange-900 flex justify-center items-center ">
+            <ol class="flex justify-center flex-col md:flex-row gap-6">
+                <a href="mailto:kumardharun607@gmail.com"><button class="h-10 w-[100px] bg-amber-200 rounded-[10px] text-amber-900 font-bold hover:bg-orange-400 h-8 p-0.5 pl-2 w-[100px] rounded-[10px] shadow-2xl transition-all duration-300 ease-in hover:scale-110">Hire Me</button></a>
+                <a href="./Dharunkumar_FullStackDevelopment.pdf">
 
-    <!-- Footer -->
-
-    <footer class="glass border-t border-white/10">
-
-        <div class="max-w-7xl mx-auto px-4 py-8">
-
-            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-
-                <a href="mailto:kumardharun607@gmail.com">
-
-                    <button
-                    class="w-40 h-12 bg-purple-600 hover:bg-purple-500 rounded-xl font-semibold transition hover:scale-105">
-
-                        Hire Me
-
-                    </button>
-
-                </a>
-
-                <a href="./Dharunkumar_FullStackDevelopment.pdf" target="_blank">
-
-                    <button
-                    class="w-40 h-12 glass rounded-xl font-semibold transition hover:scale-105">
-
-                        Resume
-
-                    </button>
-
-                </a>
-
-                <a href="https://wa.me/916379888340" target="_blank">
-
-                    <button
-                    class="w-40 h-12 glass rounded-xl font-semibold transition hover:scale-105">
-
-                        Let's Talk
-
-                    </button>
-
-                </a>
-
-            </div>
-
-            <div class="flex justify-center gap-6 mt-8 text-2xl">
-
-                <a href="mailto:kumardharun607@gmail.com" class="hover:text-purple-400">
-                    <i class="bi bi-envelope-fill"></i>
-                </a>
-
-                <a href="https://www.linkedin.com/in/techdharunkumar/" target="_blank" class="hover:text-purple-400">
-                    <i class="bi bi-linkedin"></i>
-                </a>
-
-                <a href="https://wa.me/916379888340" target="_blank" class="hover:text-purple-400">
-                    <i class="bi bi-whatsapp"></i>
-                </a>
-
-            </div>
-
-            <div class="text-center text-slate-400 text-sm mt-6">
-
-                © 2026 Dharun Kumar. All Rights Reserved.
-
-            </div>
-
+                <button class="h-10 w-[100px] bg-amber-200 rounded-[10px] text-amber-900 font-bold hover:bg-orange-400 h-8 p-0.5 pl-2 w-[100px] rounded-[10px] transition-all duration-300 ease-in hover:scale-110">Resume</button></a>
+                <a
+  href="https://wa.me/916379888340"><button class="h-10 w-[100px] bg-amber-200 rounded-[10px] text-amber-900 font-bold hover:bg-orange-400 h-8 p-0.5 pl-2 w-[100px] rounded-[10px] transition-all duration-300 ease-in hover:scale-110">Let's Talk</button></a>
+            </ol>
+            
         </div>
-
     </footer>
-
+    </div>
+     
 </body>
 </html>
-
