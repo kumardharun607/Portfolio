@@ -4,70 +4,199 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dharun Kumar | Portfolio</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
 
     <link rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <title>My Portfolio</title>
+    <style>
+
+        html{
+            scroll-behavior:smooth;
+        }
+
+        body{
+            overflow-x:hidden;
+        }
+
+        /* Floating Profile Animation */
+        @keyframes float{
+            0%,100%{
+                transform:translateY(0px);
+            }
+            50%{
+                transform:translateY(-20px);
+            }
+        }
+
+        /* Rotating Ring */
+        @keyframes rotate{
+            from{
+                transform:rotate(0deg);
+            }
+            to{
+                transform:rotate(360deg);
+            }
+        }
+
+        /* Background Glow */
+        @keyframes pulseGlow{
+            0%,100%{
+                transform:scale(1);
+                opacity:.25;
+            }
+            50%{
+                transform:scale(1.2);
+                opacity:.5;
+            }
+        }
+
+        /* Logo Animation */
+        @keyframes gradientMove{
+            0%{
+                background-position:0% 50%;
+            }
+            50%{
+                background-position:100% 50%;
+            }
+            100%{
+                background-position:0% 50%;
+            }
+        }
+
+        .floating{
+            animation:float 5s ease-in-out infinite;
+        }
+
+        .rotate-ring{
+            animation:rotate 12s linear infinite;
+        }
+
+        .glow{
+            animation:pulseGlow 8s ease-in-out infinite;
+        }
+
+        .logo-gradient{
+            background:linear-gradient(
+            90deg,
+            #a855f7,
+            #d8b4fe,
+            #ffffff,
+            #a855f7);
+
+            background-size:300% 300%;
+            animation:gradientMove 6s ease infinite;
+
+            -webkit-background-clip:text;
+            -webkit-text-fill-color:transparent;
+        }
+
+        .glass{
+            background:rgba(255,255,255,.08);
+            backdrop-filter:blur(20px);
+            border:1px solid rgba(255,255,255,.15);
+        }
+
+        .glass:hover{
+            box-shadow:
+            0 0 25px rgba(168,85,247,.4),
+            0 0 50px rgba(168,85,247,.15);
+        }
+
+    </style>
+
 </head>
 
-<body class="bg-amber-200">
+<body class="bg-slate-950 text-slate-200">
+
+    <!-- Animated Background -->
+
+    <div class="fixed inset-0 -z-10 overflow-hidden">
+
+        <div class="absolute top-0 left-0 w-80 h-80 bg-purple-600 rounded-full blur-[120px] opacity-20 glow"></div>
+
+        <div class="absolute bottom-0 right-0 w-96 h-96 bg-fuchsia-600 rounded-full blur-[150px] opacity-20 glow"></div>
+
+        <div class="absolute top-1/2 left-1/2 w-96 h-96 bg-violet-700 rounded-full blur-[150px] opacity-10 glow"></div>
+
+    </div>
 
     <!-- Navbar -->
-    <nav class="bg-orange-900 rounded-b-2xl shadow-lg">
+
+    <nav class="sticky top-0 z-50 glass">
 
         <div class="max-w-7xl mx-auto px-4 py-4">
 
-            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex flex-col lg:flex-row justify-between items-center gap-4">
 
-                <h1 class="text-2xl md:text-3xl font-bold text-amber-100">
-                    M.DharunKumar
+                <h1 class="text-3xl md:text-4xl font-bold logo-gradient">
+                    Dharun Kumar
                 </h1>
 
-                <ul class="flex flex-wrap justify-center gap-3">
+                <ul class="flex flex-wrap justify-center gap-5 text-sm md:text-base">
 
                     <li>
                         <a href="./Aboutme.html"
-                            class="text-amber-100 font-bold px-4 py-2 rounded-lg border border-amber-100 hover:bg-orange-400 transition-all duration-300 hover:scale-105 inline-block">
+                        class="relative group font-medium">
+
                             About Me
+
+                            <span class="absolute left-0 bottom-[-5px] w-0 h-[2px] bg-purple-400 transition-all duration-500 group-hover:w-full"></span>
+
                         </a>
                     </li>
 
                     <li>
                         <a href="./Skills.html"
-                            class="text-amber-100 font-bold px-4 py-2 rounded-lg border border-amber-100 hover:bg-orange-400 transition-all duration-300 hover:scale-105 inline-block">
+                        class="relative group font-medium">
+
                             Skills
+
+                            <span class="absolute left-0 bottom-[-5px] w-0 h-[2px] bg-purple-400 transition-all duration-500 group-hover:w-full"></span>
+
                         </a>
                     </li>
 
                     <li>
                         <a href="./Projects.html"
-                            class="text-amber-100 font-bold px-4 py-2 rounded-lg border border-amber-100 hover:bg-orange-400 transition-all duration-300 hover:scale-105 inline-block">
+                        class="relative group font-medium">
+
                             Projects
+
+                            <span class="absolute left-0 bottom-[-5px] w-0 h-[2px] bg-purple-400 transition-all duration-500 group-hover:w-full"></span>
+
                         </a>
                     </li>
 
                     <li>
                         <a href="./Contactme.html"
-                            class="text-amber-100 font-bold px-4 py-2 rounded-lg border border-amber-100 hover:bg-orange-400 transition-all duration-300 hover:scale-105 inline-block">
-                            Contact Me
+                        class="relative group font-medium">
+
+                            Contact
+
+                            <span class="absolute left-0 bottom-[-5px] w-0 h-[2px] bg-purple-400 transition-all duration-500 group-hover:w-full"></span>
+
                         </a>
                     </li>
 
                     <li>
                         <a href="https://www.linkedin.com/in/techdharunkumar/"
-                            target="_blank"
-                            class="text-amber-100 text-xl px-4 py-2 rounded-lg border border-amber-100 hover:bg-orange-400 transition-all duration-300 hover:scale-105 inline-block">
-                            <i class="bi bi-linkedin"></i>
+                        target="_blank"
+                        class="hover:text-purple-400 transition">
+
+                            <i class="bi bi-linkedin text-xl"></i>
+
                         </a>
                     </li>
 
                     <li>
                         <a href="mailto:kumardharun607@gmail.com"
-                            class="text-amber-100 text-xl px-4 py-2 rounded-lg border border-amber-100 hover:bg-orange-400 transition-all duration-300 hover:scale-105 inline-block">
-                            <i class="bi bi-envelope-fill"></i>
+                        class="hover:text-purple-400 transition">
+
+                            <i class="bi bi-envelope-fill text-xl"></i>
+
                         </a>
                     </li>
 
@@ -79,49 +208,108 @@
 
     </nav>
 
-    <!-- Main Section -->
-    <main class="max-w-7xl mx-auto px-4">
+    <!-- Hero Section -->
 
-        <section class="flex flex-col-reverse md:flex-row items-center min-h-[75vh]">
+    <main class="max-w-7xl mx-auto px-5">
 
-            <!-- Text -->
-            <div class="w-full md:w-1/2 flex items-center justify-center py-10">
+        <section class="min-h-[90vh] flex flex-col-reverse lg:flex-row items-center justify-center gap-12">
 
-                <div class="text-amber-900 max-w-lg">
+            <!-- Content -->
 
-                    <h2 class="text-3xl md:text-4xl font-bold mb-3">
-                        Hi I'm
+            <div class="w-full lg:w-1/2">
+
+                <div class="glass rounded-3xl p-8 transition-all duration-500">
+
+                    <h2 class="text-purple-400 text-3xl md:text-4xl font-bold mb-3">
+                        Hi, I'm
                     </h2>
 
-                    <h1 class="text-4xl md:text-5xl font-extrabold mb-5">
+                    <h1 class="text-5xl md:text-7xl font-black mb-6">
                         Dharunkumar M
                     </h1>
 
-                    <p class="text-lg leading-relaxed">
-                        Aspiring Web Developer seeking to build a career in an
-                        organization where I can effectively apply my skills and
-                        grow as a professional. Dedicated to achieving excellence
-                        and recognition in the field of web development while
-                        continuously learning and improving.
+                    <p class="text-slate-300 text-lg leading-relaxed">
+
+                        Aspiring Full Stack Web Developer passionate about
+                        building responsive and scalable web applications.
+
+                        Skilled in PHP, MySQL, JavaScript, Bootstrap,
+                        Tailwind CSS and modern web technologies.
+
+                        Dedicated to continuous learning and creating
+                        high-quality user experiences.
+
                     </p>
+
+                    <div class="flex flex-wrap gap-4 mt-8">
+
+                        <a href="./Projects.html">
+
+                            <button
+                            class="bg-purple-600 hover:bg-purple-500 px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105">
+
+                                View Projects
+
+                            </button>
+
+                        </a>
+
+                        <a href="./Contactme.html">
+
+                            <button
+                            class="glass px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105">
+
+                                Contact Me
+
+                            </button>
+
+                        </a>
+
+                    </div>
 
                 </div>
 
             </div>
 
-            <!-- Image -->
-            <div class="w-full md:w-1/2 flex justify-center py-10">
+            <!-- Profile Image -->
 
-                <img
+            <div class="w-full lg:w-1/2 flex justify-center">
+
+                <div class="relative floating">
+
+                    <!-- Ring -->
+
+                    <div
+                    class="absolute -inset-6 border-4 border-purple-500/30 rounded-full rotate-ring">
+                    </div>
+
+                    <!-- Glow -->
+
+                    <div
+                    class="absolute inset-0 bg-purple-600 rounded-full blur-3xl opacity-40">
+                    </div>
+
+                    <!-- Image -->
+
+                    <img
                     src="./asthetic-photo1.1.png"
-                    alt="My Profile"
-                    class="h-[250px] w-[250px]
-                           sm:h-[320px] sm:w-[320px]
-                           lg:h-[400px] lg:w-[400px]
-                           object-cover rounded-2xl
-                           shadow-2xl
-                           transition-all duration-500
-                           hover:scale-105">
+                    alt="Profile"
+
+                    class="relative
+                    w-[260px]
+                    h-[260px]
+                    sm:w-[340px]
+                    sm:h-[340px]
+                    lg:w-[450px]
+                    lg:h-[450px]
+                    object-cover
+                    rounded-full
+                    border-4 border-purple-500
+                    shadow-[0_0_50px_rgba(168,85,247,.5)]
+                    hover:scale-105
+                    transition-all duration-500">
+
+                </div>
 
             </div>
 
@@ -130,32 +318,51 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-orange-900">
 
-        <div class="max-w-7xl mx-auto py-8 px-4">
+    <footer class="glass border-t border-white/10">
 
-            <div class="flex flex-col sm:flex-row justify-center items-center gap-5">
+        <div class="max-w-7xl mx-auto px-4 py-8">
+
+            <div class="flex flex-col sm:flex-row justify-center gap-5">
 
                 <a href="mailto:kumardharun607@gmail.com">
+
                     <button
-                        class="w-36 h-11 bg-amber-200 text-amber-900 font-bold rounded-lg hover:bg-orange-400 transition-all duration-300 hover:scale-105">
+                    class="bg-purple-600 hover:bg-purple-500 w-40 h-12 rounded-xl font-semibold transition-all duration-300 hover:scale-105">
+
                         Hire Me
+
                     </button>
+
                 </a>
 
                 <a href="./Dharunkumar_FullStackDevelopment.pdf" target="_blank">
+
                     <button
-                        class="w-36 h-11 bg-amber-200 text-amber-900 font-bold rounded-lg hover:bg-orange-400 transition-all duration-300 hover:scale-105">
+                    class="glass w-40 h-12 rounded-xl font-semibold transition-all duration-300 hover:scale-105">
+
                         Resume
+
                     </button>
+
                 </a>
 
                 <a href="https://wa.me/916379888340" target="_blank">
+
                     <button
-                        class="w-36 h-11 bg-amber-200 text-amber-900 font-bold rounded-lg hover:bg-orange-400 transition-all duration-300 hover:scale-105">
+                    class="glass w-40 h-12 rounded-xl font-semibold transition-all duration-300 hover:scale-105">
+
                         Let's Talk
+
                     </button>
+
                 </a>
+
+            </div>
+
+            <div class="text-center mt-8 text-slate-400 text-sm">
+
+                © 2026 Dharun Kumar. All Rights Reserved.
 
             </div>
 
